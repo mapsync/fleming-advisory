@@ -49,7 +49,6 @@ collections:
           - {label: "Mailing Address", name: "mailing_address", widget: "string", required: false}
           - {label: "City, State, Zip", name: "city_state_zip", widget: "string", required: false}
           - {label: "Phone", name: "phone", widget: "string", required: false}
-          - {label: "After Hours Phone", name: "after_hours_phone", widget: "string", required: false}
+          - {label: "Toll Free Phone", name: "toll_free", widget: "string", required: false}
           - {label: "Fax", name: "fax", widget: "string", required: false}
-          - {label: "Email", name: "email", widget: "string", required: false}
           - {label: "Hours", name: "hours", widget: "string", required: false}

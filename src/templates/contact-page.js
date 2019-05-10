@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import * as Icon from 'react-feather';
 
-export const ContactPageTemplate = ({ name, address, mailing_address, city_state_zip, phone, after_hours_phone, fax, email, hours }) => {
+export const ContactPageTemplate = ({ name, address, mailing_address, city_state_zip, phone, toll_fre, fax, hours }) => {
   return (
     <div>
       <div className="container container-main grid-md">
@@ -34,9 +34,8 @@ export const ContactPageTemplate = ({ name, address, mailing_address, city_state
           </div>
           <div className="card-body">
             T: <a href={"tel:1-" + phone}>{phone}</a><br />
-            After Hours: <a href={"tel:1-" + after_hours_phone}>{after_hours_phone}</a><br />
+            Toll Free: <a href={"tel:1-" + toll_free}>{toll_free}</a><br />
             F: {fax}<br />
-            E: <a href={"mailto:" + email}>{email}</a>
           </div>
         </div>
         <div className="card">
@@ -50,7 +49,7 @@ export const ContactPageTemplate = ({ name, address, mailing_address, city_state
       </div>
       <div className="footer">
         <div className="d-inline-block float-right">
-          <a className="btn btn-sm btn-link tooltip tooltip-left" data-tooltip="Settings" rel="noopener noreferrer" href="https://stanfordwater.geosync.cloud/admin" target="_blank">
+          <a className="btn btn-sm btn-link tooltip tooltip-left" data-tooltip="Settings" rel="noopener noreferrer" href="https://flemingwater.geosync.cloud/admin" target="_blank">
             <Icon.Settings size={16}/>
           </a>
         </div>
@@ -75,9 +74,8 @@ const ContactPage = ({ data }) => {
         mailing_address={frontmatter.mailing_address}
         city_state_zip={frontmatter.city_state_zip}
         phone={frontmatter.phone}
-        after_hours_phone={frontmatter.after_hours_phone}
+        toll_free={frontmatter.toll_free}
         fax={frontmatter.fax}
-        email={frontmatter.email}
         hours={frontmatter.hours}
       />
     </Layout>
@@ -100,9 +98,8 @@ export const contactPageQuery = graphql`
         mailing_address,
         city_state_zip,
         phone,
-        after_hours_phone,
+        toll_free,
         fax,
-        email,
         hours
       }
     }

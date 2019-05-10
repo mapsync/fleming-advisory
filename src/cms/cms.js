@@ -38,9 +38,9 @@ var NotificationControl = class Control extends React.Component {
       disabled: true
     });
     var link = document.getElementById("link-field-" + (id - 1)).value;
-    if (link.startsWith("https://stanfordwater.geosync.cloud")) {
+    if (link.startsWith("https://flemingwater.geosync.cloud")) {
       var url = new URL(link);
-      link = "https://hardcore-sammet-6f1a1f.netlify.com" + url.pathname + url.search
+      link = "https://vigorous-swanson-eb0aab.netlify.com" + url.pathname + url.search
     }
     fetch("/", {
       method: "POST",

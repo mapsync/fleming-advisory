@@ -1,13 +1,11 @@
 ---
 templateKey: contact-page
-name: Stanford Waterworks
-address: 842 East Main Street
-mailing_address: P.O. BOX 45
-city_state_zip: 'Stanford, KY 40484'
-phone: 606-365-4510
-after_hours_phone: 606-365-4557
-fax: 606-365-1023
-email: sww@stanfordwater.com
-hours: 'Monday-Friday, 8am-5pm. Closed for lunch from 12pm-1pm.'
+name: Fleming County Water Association
+address: 2772 Morehead Road
+mailing_address: P O Box 327
+city_state_zip: 'Flemingsburg, KY 41041'
+phone: 606-845-3981
+toll_free: 800-845-3983
+fax: 606-845-3982
+hours: 'Monday through Friday, 7:30 am – 4:30 pm'
 ---
-

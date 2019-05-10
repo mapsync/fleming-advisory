@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: 'SWW Advisory',
-    description: 'Advisory site for Stanford Water Works',
+    title: 'FCWA Advisory',
+    description: 'Advisory site for Fleming County Water Association',
   },
   plugins: [
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
       // replace "UA-XXXXXXXXX-X" with your own Tracking ID
-        trackingId: "UA-134546071-11",
+        trackingId: "UA-134546071-13",
       },
     },
     'gatsby-plugin-react-helmet',
