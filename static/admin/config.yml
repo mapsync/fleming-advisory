@@ -4,8 +4,8 @@ backend:
 
 media_folder: static/img
 public_folder: /img
-display_url: https://stanfordwater.geosync.cloud
-logo_url: https://stanfordwater.geosync.cloud/img/logo.png
+display_url: https://flemingwater.geosync.cloud
+logo_url: https://flemingwater.geosync.cloud/img/logo.png
 
 collections:
   - name: "blog"
