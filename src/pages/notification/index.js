@@ -2,23 +2,23 @@ import React from "react";
 import { navigate } from "gatsby-link";
 import Layout from '../../components/Layout'
 
-function encode(data) {
+ function encode(data) {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&");
 }
 
-export default class Index extends React.Component {
+ export default class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isValidated: false };
   }
 
-  handleChange = e => {
+   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  handleSubmit = e => {
+   handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
     fetch("/", {
@@ -33,7 +33,7 @@ export default class Index extends React.Component {
       .catch(error => alert(error));
   };
 
-  render() {
+   render() {
     return (
       <Layout>
         <section className="section">
@@ -66,6 +66,12 @@ export default class Index extends React.Component {
             <label className="label" htmlFor={"title"}>title</label>
             <div className="control">
               <input className="input" type={"text"} name={"title"} onChange={this.handleChange} id={"title"} required={true} />
+            </div>
+          </div>
+          <div className="field">
+            <label className="label" htmlFor={"delivery"}>delivery</label>
+            <div className="control">
+              <input className="input" type={"text"} name={"delivery"} onChange={this.handleChange} id={"delivery"} required={true} />
             </div>
           </div>
           <div className="field">

@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import * as Icon from 'react-feather';
 
-export const ContactPageTemplate = ({ name, address, mailing_address, city_state_zip, phone, toll_free, fax, hours }) => {
+export const ContactPageTemplate = ({ name, address, mailing_address, city_state_zip, phone, alt_phone, fax, hours, website }) => {
   return (
     <div>
       <div className="container container-main grid-md">
@@ -34,8 +34,16 @@ export const ContactPageTemplate = ({ name, address, mailing_address, city_state
           </div>
           <div className="card-body">
             T: <a href={"tel:1-" + phone}>{phone}</a><br />
-            Toll Free: <a href={"tel:1-" + toll_free}>{toll_free}</a><br />
             F: {fax}<br />
+            For After Hour Emergencies Only: <a href={"tel:1-" + alt_phone}>{alt_phone}</a><br />
+          </div>
+        </div>
+        <div className="card">
+          <div className="card-header">
+            Website
+          </div>
+          <div className="card-body">
+            {website}
           </div>
         </div>
         <div className="card">
@@ -98,9 +106,10 @@ export const contactPageQuery = graphql`
         mailing_address,
         city_state_zip,
         phone,
-        toll_free,
+        alt_phone,
         fax,
-        hours
+        hours,
+        website
       }
     }
   }

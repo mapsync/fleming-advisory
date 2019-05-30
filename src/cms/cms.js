@@ -42,13 +42,19 @@ var NotificationControl = class Control extends React.Component {
       var url = new URL(link);
       link = "https://vigorous-swanson-eb0aab.netlify.com" + url.pathname + url.search
     }
+    var delivery = new Date().toISOString();
+    var date = new Date(document.getElementById("delivery-field-" + (id - 5)).value);
+    if (date) {
+      delivery = date.toISOString();
+    }
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": "notification",
         "account": "flemingwater",
-        "title": document.getElementById("title-field-" + (id - 5)).value,
+        "title": document.getElementById("title-field-" + (id - 6)).value,
+        "delivery": delivery,
         "priority": document.getElementById("priority-field-" + (id - 4)).getAttribute("aria-checked"),
         "sound": document.getElementById("sound-field-" + (id - 3)).getAttribute("aria-checked"),
         "message": document.getElementById("message-field-" + (id - 2)).value,
@@ -60,7 +66,7 @@ var NotificationControl = class Control extends React.Component {
           message: "Success!"
         });
         setTimeout(function () {
-          document.getElementById("title-field-" + (id - 5)).value = "";
+          document.getElementById("title-field-" + (id - 6)).value = "";
           history.push('/collections/notification');
         }, 3000)
       })
