@@ -82,9 +82,10 @@ const ContactPage = ({ data }) => {
         mailing_address={frontmatter.mailing_address}
         city_state_zip={frontmatter.city_state_zip}
         phone={frontmatter.phone}
-        toll_free={frontmatter.toll_free}
+        alt_phone={frontmatter.alt_phone}
         fax={frontmatter.fax}
         hours={frontmatter.hours}
+        website={frontmatter.website}
       />
     </Layout>
   )
