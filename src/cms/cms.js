@@ -38,7 +38,10 @@ var NotificationControl = class Control extends React.Component {
       disabled: true
     });
     var link = document.getElementById("link-field-" + (id - 1)).value;
-    if (link.startsWith("https://flemingwater.geosync.cloud")) {
+    if (link == "" || link.startsWith("https://flemingwater.geosync.cloud/admin") ) {
+      link = "https://vigorous-swanson-eb0aab.netlify.com"
+    }
+    else if (link.startsWith("https://flemingwater.geosync.cloud")) {
       var url = new URL(link);
       link = "https://vigorous-swanson-eb0aab.netlify.com" + url.pathname + url.search
     }
